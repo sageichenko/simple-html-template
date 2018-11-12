@@ -1,38 +1,133 @@
 @import (less) '../../node_modules/normalize.css/normalize.css';
 @import (less) '_media.less';
-
+@import (less) url('https://fonts.googleapis.com/css?family=Roboto');
 body {
-    background: blue;
+    background: white;
+    max-width: 1400px;
+    margin: 50px auto 50px auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
-// Стили для всех девайсов (все @media-запросы) пишутся внитри блока
+.header {
+    .logo {
+        height: 3%;
+        width: 3%;
+        margin-left: 48%;
+    }
+    .smth {
+        color: #cc0000;
+        font-size: 1.1em;
+        font-weight: bold; 
+    }
+}
+
+.row {
+    background: #eee;
+    margin-bottom: 50px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "."; 
+    display: block;  
+    clear: both;  
+    visibility: hidden; 
+    height: 0; 
+}
+
 .menu {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: red;
+    display: inline-block;
 
     @media @tablet {
-        background: green;
+        
     }
 
     @media @desktop {
-        background: blue;
+        
     }
 
-    // Пример стилей для элемента `.menu__item`
+    
     &__item {
         display: inline-block;
         list-style-type: none;
+        color: #cc0000;
+        border-bottom: 1px solid #cc0000;
+        margin-right: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }     
+        
+    }
+    
+
+    
+}
+.search-form { 
+
+    .search-form__logo {
+        height: 1em;
+        width: 1em;
+    }
+    
+}
+
+.content {
+    .tshirt-img {
+        float: left;
+        display: block;
+        max-width: 50%;
     }
 
-    // Пример модификатора `.menu_bottom`
-    &_bottom {
-        background: green;
+    .product-inf {
+        float: right;
+        &__price {
+            color: #cc0000;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        &__item{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border: 4px solid #eee;
+            height: 70px;
+            width: 70px;
+            &:hover {
+            border-color: #cc0000;
+            cursor: pointer;
+            }
+        }
+        &__size-item {
+            font-size: 2rem;
+        }
+        &__button-buy {
+            display: block;
+            height: 79px;
+            width: 202px;
+            background-color: #cc0000;
+            color: white;
+            font-size: 2rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 
-    // Пример переопределения стилей элемента в нижнем меню `.menu_bottom .menu__item`
-    &_bottom &__item {
-        color: #f00;
-    }
+}
+
+.footer {
+    background-color: #cc000;
+    
 }
