@@ -10,27 +10,27 @@
     <link rel="stylesheet" href="css/main.css">    
 </head>
 <body>
-	<header class="header">
+	<header class="header grid">
 		<span class="smth left">7h3 5h0p</span>
 		<span class="smth right">+7 (812) 2-12-85-06</span>
 		<img class="logo" src="img/icons/png.png" alt="">
 	</header>
 	<section class="row clearfix">
-		<menu class="menu left">
-			<ul>
-				<li class="menu__item">LISP</li>
-				<li class="menu__item">OCaml</li>
-				<li class="menu__item">JavaScript</li>
-				<li class="menu__item">Python</li>
-				<li class="menu__item">PHP</li>
-			</ul>
-		</menu>
-		<form class="search-form right" action="">
-			<input type="search-form__search-field">
-			<input class="search-form__logo" type="image" src="img/icons/png.png">
-		</form>
+		<div class="grid">
+				<ul class="menu left">
+					<li class="menu__item">LISP</li>
+					<li class="menu__item">OCaml</li>
+					<li class="menu__item">JavaScript</li>
+					<li class="menu__item">Python</li>
+					<li class="menu__item">PHP</li>
+				</ul>
+			<form class="search-form right" action="">
+				<input type="search-form__search-field">
+				<input class="search-form__logo" type="image" src="img/icons/png.png">
+			</form>
+		</div>
 	</section>
-	<main class="content">
+	<main class="content grid">
 		<img class="tshirt-img" src="img/tshirts/tshirt_green.jpg" alt="">
 		<div class="product-inf">
 			<h1 class="product-inf__name">Футболка Alien technology</h1>
@@ -56,7 +56,48 @@
 		</div>
 	</main>
 	
-	<footer class="footer">
+	<footer class="footer row">
+	<div class="grid">
+		<div class="footer__item-support footer__item">
+			<h3 class="title">Сервис и поддержка</h3>
+			<ul class="footer__column">
+				<li>Как сделать заказ</li>
+				<li>Возврат товара</li>
+				<li>Публичная оферта</li>
+				<li>Доставка</li>
+			</ul>
+			<ul class="footer__column">
+				<li>Способы оплаты</li>
+				<li>Правила продажи</li>
+				<li>Возврат денежных средств</li>
+				<li>Вопросы и ответы</li>
+			</ul>
+		</div>
+		<div class="footer__item-about footer__item">
+			<h3 class="title">О компании</h3>
+			<ul class="footer__column">
+				<li>О нас</li>
+				<li>Контакты</li>
+				<li>Вакансии</li>
+				<li>Партнерам</li>
+			</ul>
+			<ul class="footer__column">
+				<li>Сертификаты</li>
+				<li>Преимущества</li>
+				<li>Наши скидки</li>
+			</ul>
+		</div>
+		<ul class="footer__item-service footer__item footer__column">
+			<li><img src="img/delivery.svg" alt="">Беспалатная доставка</li>
+			<li><img src="img/heart.svg" alt="">Пробники в подарок при каждой покупке</li>
+			<li><img src="img/cup.svg" alt="">Акции и подарки за покупку</li>
+		</ul>
+		<ul class="footer__item-contact footer__item footer__column">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
 	</footer>
 	
 	<script src="js/scripts.js"></script>

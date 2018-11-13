@@ -3,12 +3,14 @@
 @import (less) url('https://fonts.googleapis.com/css?family=Roboto');
 body {
     background: white;
-    max-width: 1400px;
-    margin: 50px auto 50px auto;
+    
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
-
+ .grid {
+    margin: 50px auto 50px auto;
+    max-width: 1400px;
+ }
 .header {
     .logo {
         height: 3%;
@@ -23,8 +25,7 @@ body {
 }
 
 .row {
-    background: #eee;
-    margin-bottom: 50px;
+    background: #f4f4ef;
 }
 
 .left {
@@ -36,11 +37,11 @@ body {
 }
 
 .clearfix:after {
-    content: "."; 
-    display: block;  
-    clear: both;  
-    visibility: hidden; 
-    height: 0; 
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
 }
 
 .menu {
@@ -48,6 +49,7 @@ body {
     padding: 0;
     text-align: center;
     display: inline-block;
+    padding-left: 0;
 
     @media @tablet {
         
@@ -85,13 +87,16 @@ body {
 
 .content {
     .tshirt-img {
-        float: left;
-        display: block;
+
+        display: inline-block;
         max-width: 50%;
     }
 
     .product-inf {
-        float: right;
+        display: inline-block;
+        vertical-align: top;
+        max-width: 40%;
+        margin-left: 20px; 
         &__price {
             color: #cc0000;
             font-weight: bold;
@@ -101,7 +106,7 @@ body {
             margin-top: 20px;
             margin-bottom: 20px;
             background-color: white;
-            border: 4px solid #eee;
+            border: 4px solid #f4f4ef;
             height: 70px;
             width: 70px;
             &:hover {
@@ -128,6 +133,17 @@ body {
 }
 
 .footer {
-    background-color: #cc000;
-    
+    padding: 20px 20px;
+    &__item {
+        display: inline-block;
+    }
+    &__column {
+        padding-left: 0;
+        margin-right: 50px;
+        display: inline-block;
+        list-style-type: none;
+        & li {
+            padding-top: 10px;
+        }
+    }
 }
