@@ -12,12 +12,12 @@ body {
     max-width: 1400px;
  }
 .header {
-    .logo {
-        height: 3%;
-        width: 3%;
+    &__logo {
+        fill: #cc0000;
+        width: 4%;
         margin-left: 48%;
     }
-    .smth {
+    &__title {
         color: #cc0000;
         font-size: 1.1em;
         font-weight: bold; 
@@ -26,6 +26,7 @@ body {
 
 .row {
     background: #f4f4ef;
+    min-height: 50px;
 }
 
 .left {
@@ -79,13 +80,31 @@ body {
 .search-form { 
 
     .search-form__logo {
-        height: 1em;
-        width: 1em;
+        height: 1.5em;
+        width: 1.5em;
+        fill: #fff;
     }
     
 }
 
 .content {
+
+    .navigation{
+        margin-bottom: 25px;
+        &__item {
+            color: #cc0000;
+            border-bottom: 1px solid #cc0000;
+            display: inline-block;
+            list-style-type: none;
+            &:last-child {
+                color: #000;
+                border-bottom: none;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
     .tshirt-img {
 
         display: inline-block;
@@ -96,7 +115,7 @@ body {
         display: inline-block;
         vertical-align: top;
         max-width: 40%;
-        margin-left: 20px; 
+        margin-left: 50px; 
         &__price {
             color: #cc0000;
             font-weight: bold;
@@ -146,4 +165,25 @@ body {
             padding-top: 10px;
         }
     }
+    
+
+    &__img{
+        display: inline-block;
+        margin-right: 10px;
+        width: 100px;
+        text-align: right;
+        //height:  2.5rem;
+        & img {
+            
+            height: 2rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__img-contact {
+        text-align: center;
+    }
 }
+
+

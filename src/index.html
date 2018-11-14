@@ -11,9 +11,9 @@
 </head>
 <body>
 	<header class="header grid">
-		<span class="smth left">7h3 5h0p</span>
-		<span class="smth right">+7 (812) 2-12-85-06</span>
-		<img class="logo" src="img/icons/png.png" alt="">
+		<span class="header__title left">7h3 5h0p</span>
+		<span class="header__title right">+7 (812) 2-12-85-06</span>
+		<img class="header__logo" src="img/oggetto_logo.svg" alt="">
 	</header>
 	<section class="row clearfix">
 		<div class="grid">
@@ -26,11 +26,16 @@
 				</ul>
 			<form class="search-form right" action="">
 				<input type="search-form__search-field">
-				<input class="search-form__logo" type="image" src="img/icons/png.png">
+				<img class="search-form__logo" src="img/icons/search.svg">
 			</form>
 		</div>
 	</section>
 	<main class="content grid">
+		<nav class="navigation">
+			<li class="navigation__item">LISP</li>/
+			<li class="navigation__item">Одежда</li>/
+			<li class="navigation__item">Футболки</li>
+		</nav>
 		<img class="tshirt-img" src="img/tshirts/tshirt_green.jpg" alt="">
 		<div class="product-inf">
 			<h1 class="product-inf__name">Футболка Alien technology</h1>
@@ -58,7 +63,7 @@
 	
 	<footer class="footer row">
 	<div class="grid">
-		<div class="footer__item-support footer__item">
+		<div class="footer__support footer__item">
 			<h3 class="title">Сервис и поддержка</h3>
 			<ul class="footer__column">
 				<li>Как сделать заказ</li>
@@ -73,7 +78,7 @@
 				<li>Вопросы и ответы</li>
 			</ul>
 		</div>
-		<div class="footer__item-about footer__item">
+		<div class="footer__about footer__item">
 			<h3 class="title">О компании</h3>
 			<ul class="footer__column">
 				<li>О нас</li>
@@ -87,16 +92,26 @@
 				<li>Наши скидки</li>
 			</ul>
 		</div>
-		<ul class="footer__item-service footer__item footer__column">
-			<li><img src="img/delivery.svg" alt="">Беспалатная доставка</li>
-			<li><img src="img/heart.svg" alt="">Пробники в подарок при каждой покупке</li>
-			<li><img src="img/cup.svg" alt="">Акции и подарки за покупку</li>
+		<div class="footer__service footer__item">
+		<ul class="footer__column">
+			<li><div class="footer__img"><img src="img/icons/delivery.svg" alt=""></div>Бесплатная доставка</li>
+			<li><div class="footer__img"><img src="img/icons/heart.svg" alt=""></div>Пробники в подарок при каждой покупке</li>
+			<li><div class="footer__img"><img src="img/icons/cup.svg" alt=""></div>Акции и подарки за покупку</li>
 		</ul>
-		<ul class="footer__item-contact footer__item footer__column">
-			<li></li>
-			<li></li>
-			<li></li>
+
+		</div>
+		<div class="footer__item-contact footer__item">
+		<ul class="footer__column">
+			<li><div class="footer__img footer__img-contact"><img src="img/icons/facebook.svg" alt=""></div></li>
+			<li><div class="footer__img footer__img-contact"><img src="img/icons/twitter.svg" alt=""></div></li>
+			<li><div class="footer__img footer__img-contact"><img src="img/icons/instagram.svg" alt=""></div></li>
 		</ul>
+	</div>
+	</div>
+	<hr class="grid">
+	<div class="copyright grid">
+		<p>2005-2017 &copy 7h35h0p.ru - модный интернет магазин одежды, обуви и аксессуаров</p>
+		<p>Все права защищены. Доставка по всей России!</p>
 	</div>
 	</footer>
 	
