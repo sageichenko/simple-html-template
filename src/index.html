@@ -10,54 +10,52 @@
     <link rel="stylesheet" href="css/main.css">    
 </head>
 <body>
-	<header class="header grid">
+	<header class="header grid clearfix">
 		<span class="header__title left">7h3 5h0p</span>
-		<span class="header__title right">+7 (812) 2-12-85-06</span>
+		<span class="header__title right">+7 (812) 2&bull;12&bull;85&bull;06</span>
 		<img class="header__logo" src="img/oggetto_logo.svg" alt="">
 	</header>
-	<section class="row clearfix">
+	<section class="navigation row clearfix">
 		<div class="grid">
 				<ul class="menu left">
-					<li class="menu__item">LISP</li>
-					<li class="menu__item">OCaml</li>
-					<li class="menu__item">JavaScript</li>
-					<li class="menu__item">Python</li>
-					<li class="menu__item">PHP</li>
+					<li class="menu__item"><a href="#" class="menu__link">LISP</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">OCaml</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">JavaScript</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Python</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
 				</ul>
 			<form class="search-form right" action="">
 				<input type="search-form__search-field">
-				<img class="search-form__logo" src="img/icons/search.svg">
+				<input type="submit" class="search-form__submit" value="">
+
 			</form>
 		</div>
 	</section>
 	<main class="content grid">
-		<nav class="navigation">
-			<li class="navigation__item">LISP</li>/
-			<li class="navigation__item">Одежда</li>/
-			<li class="navigation__item">Футболки</li>
+		<nav class="bread-crumbs">
+			<li class="bread-crumbs__item">LISP</li>/
+			<li class="bread-crumbs__item">Одежда</li>/
+			<li class="bread-crumbs__item">Футболки</li>
 		</nav>
 		<img class="tshirt-img" src="img/tshirts/tshirt_green.jpg" alt="">
 		<div class="product-inf">
 			<h1 class="product-inf__name">Футболка Alien technology</h1>
 			<p class="product-inf__description">Состав 100% хлопок, динамическая типизация, польская нотация. Производство Россия</p>
 			<p class="product-inf__price">1500&#8381</p>
-			<label class="product-inf__label" for="">
-				Размер:<br>
-			
+			<form action="">
+				<p>Размер:</p>
 				<input class="product-inf__size-item product-inf__item" type="button" value="S">
 				<input class="product-inf__size-item product-inf__item" type="button" value="M">
 				<input class="product-inf__size-item product-inf__item" type="button" value="L">
-			</label>
-			
-			<label class="product-inf__color" for="">
-				<br>Цвет:<br>
-			
+				<p>Цвет:</p>
+				
 				<input class="product-inf__color-item product-inf__item" type="button" style="background-color: #fff">
 				<input class="product-inf__color-item product-inf__item" type="button" style="background-color: #e3d95e">
 				<input class="product-inf__color-item product-inf__item" type="button" style="background-color: #a5af96">
-			</label>
-			<input class="product-inf__button-buy" type="submit" value="Купить">
-	
+				<input class="product-inf__button-buy" type="submit" value="Купить">
+				 
+				<span class="product-inf__buy-later">&hearts;Отложить на потом</span>
+			</form>
 		</div>
 	</main>
 	
