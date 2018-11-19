@@ -25,7 +25,7 @@
 					<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
 				</ul>
 			<form class="search-form right" action=""> 
-				<input type="search-form__search-field">
+				<input type="search" class="search-form__search-field" value="">
 				<input type="submit" class="search-form__submit" value="">
 
 			</form>
@@ -54,7 +54,9 @@
 				<input class="product-inf__color-item product-inf__item" type="button" style="background-color: #a5af96">
 				<input class="product-inf__button-buy" type="submit" value="Купить">
 				 
-				<div class="product-inf__buy-later"><span class="product-inf__img-buy-later">&hearts;</span>Отложить на потом</div>
+				<!--div class="product-inf__buy-later"><span class="product-inf__img-buy-later">&hearts;</span><input type="text" class="product-inf__button-buy-later" value="Отложить на потом"></div-->
+
+				<span class="product-inf__img-buy-later">&hearts;</span><input type="button" class="product-inf__buy-later" value="Отложить на потом">
 			</form>
 		</div>
 	</main>
@@ -62,6 +64,7 @@
 	<footer class="footer row">
 	<div class="grid">
 		<div class="footer__inf">
+			<div class="footer__block">
 		<div class="footer__support footer__item">
 			<h3 class="title">Сервис и поддержка</h3>
 			<ul class="footer__column">
@@ -91,7 +94,9 @@
 				<li>Наши скидки</li>
 			</ul>
 		</div>
-		<div class="footer__service footer__item">
+	</div>
+	<div class="footer__block">
+		<div class="footer__item-service footer__item">
 		<ul class="footer__column">
 			<li><div class="footer__img"><img src="img/icons/delivery.svg" alt=""></div>Бесплатная доставка</li>
 			<li><div class="footer__img"><img src="img/icons/heart.svg" alt=""></div>Пробники в подарок при каждой покупке</li>
@@ -101,15 +106,16 @@
 		</div>
 		<div class="footer__item-contact footer__item">
 		<ul class="footer__column">
-			<li><div class="footer__img footer__img-contact"><img src="img/icons/facebook.svg" alt=""></div></li>
-			<li><div class="footer__img footer__img-contact"><img src="img/icons/twitter.svg" alt=""></div></li>
-			<li><div class="footer__img footer__img-contact"><img src="img/icons/instagram.svg" alt=""></div></li>
+			<li><a href="#" class="footer__img footer__img-contact"><img src="img/icons/facebook.svg" alt=""></a></li>
+			<li><a href="#" class="footer__img footer__img-contact"><img src="img/icons/twitter.svg" alt=""></a></li>
+			<li><a href="#" class="footer__img footer__img-contact"><img src="img/icons/instagram.svg" alt=""></a></li>
 		</ul>
 		</div>
+	</div>
 		</div>
 		<hr>
 		<div class="copyright">
-			<p>2005-2017 &#copy; 7h35h0p.ru - модный интернет магазин одежды, обуви и аксессуаров</p>
+			<p>2005-2017 &copy; 7h35h0p.ru - модный интернет магазин одежды, обуви и аксессуаров</p>
 			<p>Все права защищены. Доставка по всей России!</p>
 		</div>
 	</div>

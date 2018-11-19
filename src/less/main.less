@@ -5,9 +5,12 @@ body {
     background: white;
     
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    
     @media @tablet {
         font-size: 14px;
+    }
+    @media @desktop {
+        font-size: 16px;
     }
 }
  .grid {
@@ -20,13 +23,13 @@ body {
     margin-top: 25px;
     &__logo {
         fill: #cc0000;
-        width: 3rem;
+        width: 3em;
         display: block;
         margin: auto auto;
         vertical-align: middle;
     }
     &__title {        
-        line-height: 4rem;
+        line-height: 4em;
         color: #cc0000;
         font-size: 1.1em;
         font-weight: bold; 
@@ -59,7 +62,9 @@ body {
 
 .navigation {
     height: 50px;
+
 }
+
 
 .menu {
     margin: 0;
@@ -102,10 +107,15 @@ body {
 }
 .search-form { 
     line-height: 50px;
+    &__search-field {
+        display: inline-block;
+        height: 2em;
+        width: 11em;
+    }
     &__submit {
         vertical-align: middle;
-        height: 1.5em;
-        width: 1.5em;
+        height: 2em;
+        width: 2em;
         background-image: url("img/icons/search.svg");
     }
     
@@ -143,25 +153,26 @@ body {
         margin-left: 50px; 
 
         &__name {
+            font-size: 2em;
             margin-top: 0;
             @media @tablet {
-                font-size: 1.3rem;
+                //font-size: 1.3rem;
             }
             @media @desktop {
-                font-size: 2rem;
+                //font-size: 2rem;
             }
         }
         &__price {
             color: #cc0000;
             font-weight: bold;
-            
+            font-size: 2em;
             @media @tablet {
-                font-size: 1.3rem;
+                //font-size: 1.3rem;
                 margin-top: 5px;
                 margin-bottom: 5px;
             }
             @media @desktop {
-                font-size: 2rem;
+                //font-size: 2rem;
             }
         }
         &__item{
@@ -188,9 +199,9 @@ body {
             
         }
         &__size-item {
-            font-size: 2rem;
+            font-size: 2em;
             @media @tablet {
-                font-size: 1.3rem;
+                //font-size: 1.3rem;
             }
 
         }
@@ -198,7 +209,7 @@ body {
             display: block;
             background-color: #cc0000;
             color: white;
-
+            font-size: 1.5em;
             &:hover {
                 cursor: pointer;
             }
@@ -207,12 +218,12 @@ body {
                 width: 120px;
                 background-color: #cc0000;
                 color: white;
-                font-size: 1.3rem;
+                //font-size: 1.3rem;
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
             @media @desktop {
-                font-size: 2rem;
+                //font-size: 2rem;
                 height: 80px;
                 width: 200px;
                 margin-top: 20px;
@@ -221,13 +232,26 @@ body {
 
         }
         &__buy-later {
+            border: none;
+            background-color: #fff; 
+            line-height: 1rem;
             display: inline-block;
             color: #aaa;
             border-bottom: 1px solid #aaa;
+            &:hover {
+                cursor: pointer;
+            }
+            @media @tablet {
+                 
+            }
+            @media @desktop {
+                
+            }
 
         }
         &__img-buy-later {
-            font-size: 1.5rem;
+            color: #aaa;
+            font-size: 1.5eem;
         }
     }
 
@@ -235,31 +259,40 @@ body {
 
 .footer {
     font-size: 0.9rem;
-    padding: 20px 20px;
+    padding: 40px 0;
     &__inf {
         margin-bottom: 80px;
     }
-    &__item {
+    //&__block {
+        //display: inline-block;
+    //}
+    &__item,
+    &__block{
+        vertical-align: top;
         display: inline-block;
-        margin-right: 60px;
+        margin-right: 50px;
         &:last-child  {
             margin-right: 0;
         }
+
     }
     &__column {
         padding-left: 0;
-        //margin-right: 60px;
         display: inline-block;
         list-style-type: none;
         & li {
             padding-top: 10px;
-
         }
     }
     
     &__support &__column, 
     &__about &__column {
+        vertical-align: top;
         margin-right: 50px;
+    }
+    
+    &__service {
+        
     }
 
     &__img{
@@ -269,14 +302,14 @@ body {
         text-align: right;
         //height:  2.5rem;
         & img {
-            height: 2rem;
+            height: 2em;
             &:hover {
                 cursor: pointer;
             }
         }
     }
     &__img-contact {
-        text-align: center;
+        text-align: right;
     }
 }
 
