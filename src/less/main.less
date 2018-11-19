@@ -5,7 +5,9 @@ body {
     background: white;
     
     font-family: 'Roboto', sans-serif;
-    
+    @media @phone {
+        font-size: 10px;
+    }
     @media @tablet {
         font-size: 14px;
     }
@@ -16,11 +18,17 @@ body {
  .grid {
     margin: 0 auto;
     max-width: 1450px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media @tablet {
+        padding-left: 25px;
+        padding-right: 25px;  
+    }
+    
  }
 .header {
-    margin-top: 25px;
+
+    margin-top: 1rem;
     &__logo {
         fill: #cc0000;
         width: 3em;
@@ -62,7 +70,6 @@ body {
 
 .navigation {
     height: 50px;
-
 }
 
 
@@ -72,7 +79,11 @@ body {
     text-align: center;
     display: inline-block;
     padding-left: 0;
-
+    
+    @media @phone {
+        visibility: hidden; //сделать выпадающее меню
+        height: 50px;
+    }
     @media @tablet {
         
     }
@@ -83,13 +94,16 @@ body {
 
     
     &__item {
-        display: inline-block;
+        
         text-decoration: none; 
         margin-right: 20px;
         line-height: 50px;
         &:hover {
             cursor: pointer;
         }     
+        @media @tablet {
+            display: inline-block;
+        }
     }
     &__link:link {
         color: #cc0000;
@@ -109,8 +123,12 @@ body {
     line-height: 50px;
     &__search-field {
         display: inline-block;
+        width: 15em;
+        @media @tablet {
+            width: 11em;
+        }
         height: 2em;
-        width: 11em;
+        
     }
     &__submit {
         vertical-align: middle;
@@ -122,8 +140,8 @@ body {
 }
 
 .content {
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     .bread-crumbs{
         margin: 25px 0;
         &__item {
@@ -141,44 +159,45 @@ body {
         }
     }
     .tshirt-img {
-
         display: inline-block;
-        max-width: 50%;
+        max-width: 100%;
+        @media @tablet {
+            max-width: 50%;
+        }
+        
     }
 
     .product-inf {
         display: inline-block;
         vertical-align: top;
-        max-width: 40%;
-        margin-left: 50px; 
+        max-width: 100%;
+        padding-left: 5%;
+        padding-top: 1rem;
+        //margin-left: 50px; 
+        
 
         &__name {
             font-size: 2em;
             margin-top: 0;
-            @media @tablet {
-                //font-size: 1.3rem;
-            }
-            @media @desktop {
-                //font-size: 2rem;
-            }
+        }
+        &__description {
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
         }
         &__price {
             color: #cc0000;
             font-weight: bold;
             font-size: 2em;
-            @media @tablet {
-                //font-size: 1.3rem;
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
-            @media @desktop {
-                //font-size: 2rem;
-            }
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+
         }
         &__item{
             background-color: white;
             border: 4px solid #f4f4ef;
-
+            height: 4rem;
+            width: 4rem;
+            
             &:hover {
             border-color: #cc0000;
             cursor: pointer;
@@ -187,14 +206,14 @@ body {
             @media @tablet {
                 margin-top: 0;
                 margin-bottom: 0;
-                height: 50px;
-                width: 50px;
+                //height: 50px;
+                //width: 50px;
             }
             @media @desktop {
                 margin-top: 10px;
                 margin-bottom: 10px;
-                height: 70px;
-                width: 70px;  
+                //height: 70px;
+                //width: 70px;  
             }
             
         }
@@ -210,12 +229,16 @@ body {
             background-color: #cc0000;
             color: white;
             font-size: 1.5em;
+            height: 4rem;
+            width: 12rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
             &:hover {
                 cursor: pointer;
             }
             @media @tablet {
-                height: 45px;
-                width: 120px;
+                //height: 45px;
+                //width: 120px;
                 background-color: #cc0000;
                 color: white;
                 //font-size: 1.3rem;
@@ -224,8 +247,8 @@ body {
             }
             @media @desktop {
                 //font-size: 2rem;
-                height: 80px;
-                width: 200px;
+                //height: 80px;
+                //width: 200px;
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
@@ -234,43 +257,60 @@ body {
         &__buy-later {
             border: none;
             background-color: #fff; 
-            line-height: 1rem;
+            height: 2em;
             display: inline-block;
             color: #aaa;
             border-bottom: 1px solid #aaa;
             &:hover {
                 cursor: pointer;
             }
-            @media @tablet {
-                 
-            }
-            @media @desktop {
-                
-            }
+
 
         }
         &__img-buy-later {
             color: #aaa;
-            font-size: 1.5eem;
+            font-size: 2em;
+            font-stretch: ultra-expanded;
         }
+
+        @media @desktop {
+            
+        }
+        @media @tablet {
+            padding-top: 0;
+            max-width: 40%;
+        }
+    }
+    @media @tablet {
+        padding-top: 50px;
+        padding-bottom: 100px;
     }
 
 }
 
 .footer {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     padding: 40px 0;
     &__inf {
-        margin-bottom: 80px;
+        margin-right: auto;
+        margin-left: auto;
     }
-    //&__block {
-        //display: inline-block;
-    //}
-    &__item,
-    &__block{
+    &__block {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: auto;
+        margin-left: auto;
+        @media @tablet {
+            min-width: 100%
+        }
+        @media @desktop {
+            min-width: 49%;
+        }
+    }
+    &__item{
         vertical-align: top;
         display: inline-block;
-        margin-right: 50px;
+        margin-right: 2em;
         &:last-child  {
             margin-right: 0;
         }
@@ -284,11 +324,19 @@ body {
             padding-top: 10px;
         }
     }
-    
+    &__service {
+        
+        @media @tablet {
+            padding-left: 0;
+        }
+        @media @desktop {
+            padding-left: 5em;
+        }
+    }
     &__support &__column, 
     &__about &__column {
         vertical-align: top;
-        margin-right: 50px;
+        margin-right: 3em;
     }
     
     &__service {
@@ -309,8 +357,9 @@ body {
         }
     }
     &__img-contact {
-        text-align: right;
+        text-align: center;
     }
+
 }
 
 
