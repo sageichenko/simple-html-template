@@ -17,12 +17,13 @@
 	</header>
 	<section class="navigation row clearfix">
 		<div class="grid">
+			<div class="hidden-menu"></div>
 				<ul class="menu left">
-					<li class="menu__item"><a href="#" class="menu__link">LISP</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">OCaml</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">JavaScript</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Python</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">PHP</a></li>
+					<li class="menu__item"><a href="#" class="menu__link link _current">LISP</a></li>
+					<li class="menu__item"><a href="#" class="menu__link link">OCaml</a></li>
+					<li class="menu__item"><a href="#" class="menu__link link">JavaScript</a></li>
+					<li class="menu__item"><a href="#" class="menu__link link">Python</a></li>
+					<li class="menu__item"><a href="#" class="menu__link link">PHP</a></li>
 				</ul>
 			<form class="search-form right" action=""> 
 				<input type="search" class="search-form__search-field" value="">
@@ -32,30 +33,50 @@
 	</section>
 	<main class="content grid">
 		<nav class="bread-crumbs">
-			<li class="bread-crumbs__item">LISP</li>/
-			<li class="bread-crumbs__item">Одежда</li>/
-			<li class="bread-crumbs__item">Футболки</li>
+			<li class="bread-crumbs__item"><a href="" class="bread-crumbs__link link">LISP</a></li>/
+			<li class="bread-crumbs__item"><a href="" class="bread-crumbs__link link">Одежда</a></li>/
+			<li class="bread-crumbs__item"><a href="" class="bread-crumbs__link _current link">Футболки</a></li>
 		</nav>
-		<img class="tshirt-img" src="img/tshirts/tshirt_green.jpg" alt="">
+		<img id="tshirt-img" class="tshirt-img" src="img/tshirts/tshirt_green.jpg" alt="">
 		<div class="product-inf">
 			<h1 class="product-inf__name">Футболка Alien technology</h1>
 			<p class="product-inf__description">Состав 100% хлопок, динамическая типизация, польская нотация. Производство Россия</p>
 			<p class="product-inf__price">1500&#8381;</p>
 			<form action="">
 				<p>Размер:</p>
-				<input class="product-inf__size-item product-inf__item" type="button" value="S">
-				<input class="product-inf__size-item product-inf__item" type="button" value="M">
-				<input class="product-inf__size-item product-inf__item" type="button" value="L">
+				<label class="product-inf__size">
+					<input class="product-inf__size-item radio-button" type="radio" name="size" value="S"> 
+					<div class="product-inf__item"><span>S</span></div>
+				</label>	
+				<label class="product-inf__size">
+					<input class="product-inf__size-item radio-button" type="radio" name="size" value="M" checked=""> 
+					<div class="product-inf__item"><span>M</span></div>
+				</label>
+				<label class="product-inf__size">
+					<input class="product-inf__size-item radio-button" type="radio" name="size" value="L"> 
+					<div class="product-inf__item"><span>L</span></div>
+				</label>
 				<p>Цвет:</p>
+				<label class="product-inf__color">
+					<input class="product-inf__color-item radio-button" type="radio" name="color" value="white" onclick="changeColor(value)">
+					<div id="color1" class="product-inf__item"></div>
+				</label>
+				<label class="product-inf__color">
+					<input class="product-inf__color-item radio-button" type="radio" name="color" value="yellow" onclick="changeColor(value)">
+					<div id="color2" class="product-inf__item"></div>
+				</label>
+				<label class="product-inf__color">
+					<input class="product-inf__color-item radio-button" type="radio" name="color" value="green" checked="" onclick="changeColor(value)">
+					<div id="color3" class="product-inf__item"></div>
+				</label>
+				<input class="product-inf__button-buy" type="submit" value="Купить" >
 				
-				<input class="product-inf__color-item product-inf__item" type="button" style="background-color: #fff">
-				<input class="product-inf__color-item product-inf__item" type="button" style="background-color: #e3d95e">
-				<input class="product-inf__color-item product-inf__item" type="button" style="background-color: #a5af96">
-				<input class="product-inf__button-buy" type="submit" value="Купить">
 				 
 				<!--div class="product-inf__buy-later"><span class="product-inf__img-buy-later">&hearts;</span><input type="text" class="product-inf__button-buy-later" value="Отложить на потом"></div-->
 
-				<span class="product-inf__img-buy-later">&hearts;</span><input type="button" class="product-inf__buy-later" value="Отложить на потом">
+				<label for="" class="product-inf__buy-later">
+					<span class="product-inf__img-buy-later">&hearts;</span>
+					<input type="button" class="product-inf__button-buy-later" value="Отложить на потом""></label>
 			</form>
 		</div>
 	</main>

@@ -65,6 +65,14 @@ body {
     height: 50px;
 }
 
+.link {
+    &:link {
+        color: #cc0000;
+    }
+    &:visited {
+        color: #cc0000;
+    }    
+}
 
 .menu {
     margin: 0;
@@ -88,20 +96,14 @@ body {
         @media @tablet {
             display: inline-block;
         }
+
     }
+
      
-    &__link {
-        &:link {
-            color: #cc0000;
-        }
-        &:visited {
-            color: #cc0000;
-        }
-        &_current {
-            color: #000;
-            font-style: bold;
-            border-bottom: none;
-        }
+    &__link._current {
+        text-decoration: none; 
+        color: #000;
+        font-style: bold;
     }
 }
 
@@ -120,7 +122,7 @@ body {
         vertical-align: middle;
         height: 2em;
         width: 2em;
-        background-image: url("img/icons/search.svg");
+        background-image: url("../img/icons/search.svg");
     }
     
 }
@@ -131,19 +133,17 @@ body {
 
     .bread-crumbs{
         margin: 25px 0;
-
         &__item {
             color: #cc0000;
-            border-bottom: 1px solid #cc0000;
             display: inline-block;
             list-style-type: none;
-            &:last-child {
-                color: #000;
-                border-bottom: none;
-            }
             &:hover {
                 cursor: pointer;
             }
+        }
+        &__link._current {
+            text-decoration: none; 
+            color: #000;
         }
     }
 
@@ -180,16 +180,25 @@ body {
             margin-bottom: 0.3em;
 
         }
+        
+        .radio-button {
+            display: none;
+        }
 
         &__item{
+            display: inline-block;
+            text-align: center;
+            line-height: 4rem;
+            opacity: 0.7;
+            font-size: 2em;
             background-color: white;
-            border: 4px solid #f4f4ef;
+            border: 4px solid #ccc;
             height: 4rem;
             width: 4rem;
             
             &:hover {
-                border-color: #cc0000;
                 cursor: pointer;
+                opacity: 1;
             }
 
             @media @tablet {
@@ -199,15 +208,26 @@ body {
             @media @desktop {
                 margin-top: 10px;
                 margin-bottom: 10px; 
-            }
-            
-            &_checked {
-                border-color: #cc0000;
-            }
+            }            
+        }
+
+        .radio-button:checked + .product-inf__item {
+            border-color: #cc0000;
+            opacity: 1;
+        }
+
+        #color1 {
+            background-color: #fff;
+        }
+        #color2 {
+            background-color: #e3d95e;
+        }
+        #color3 {
+            background-color: #a5af96;
         }
 
         &__size-item {
-            font-size: 2em;
+            //font-size: 2em;
         }
 
         &__button-buy {
@@ -219,40 +239,38 @@ body {
             width: 12rem;
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
+            
             &:hover {
                 cursor: pointer;
+                opacity: 1;
             }
             @media @tablet {
-                //height: 45px;
-                //width: 120px;
-                background-color: #cc0000;
-                color: white;
-                //font-size: 1.3rem;
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
             @media @desktop {
-                //font-size: 2rem;
-                //height: 80px;
-                //width: 200px;
+                opacity: 0.9;
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
 
         }
         &__buy-later {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__button-buy-later {
             border: none;
             background-color: #fff; 
             height: 2em;
             display: inline-block;
             color: #aaa;
             border-bottom: 1px solid #aaa;
-            &:hover {
-                cursor: pointer;
-            }
         }
         &__img-buy-later {
-            color: #aaa;
+            color: #999;
             font-size: 2em;
             font-stretch: ultra-expanded;
         }
