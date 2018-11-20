@@ -3,11 +3,8 @@
 @import (less) url('https://fonts.googleapis.com/css?family=Roboto');
 body {
     background: white;
-    
     font-family: 'Roboto', sans-serif;
-    @media @phone {
-        font-size: 10px;
-    }
+    font-size: 12px;
     @media @tablet {
         font-size: 14px;
     }
@@ -289,7 +286,7 @@ body {
         margin-left: auto;
         min-width: 100%;
 
-        @media @desktop {
+        @media @large {
             min-width: 49%;
         }
     }
@@ -297,12 +294,7 @@ body {
         vertical-align: top;
         display: inline-block;
         margin-right: 0;
-        &:last-child  {
-            margin-right: 0;
-        }
-        @media @desktop {
-            //margin-right: 10;
-        }
+
     }
     &__column {
         padding-left: 0;
@@ -315,11 +307,8 @@ body {
 
     &__service {
         padding-left: 0;
-        @media @tablet {
-            
-        }
         @media @desktop {
-            padding-left: 20%;
+            padding-left: 15%;
         }
     }
 
