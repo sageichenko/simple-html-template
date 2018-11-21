@@ -61,10 +61,6 @@ body {
     height: 0;
 }
 
-.navigation {
-    height: 50px;
-}
-
 .link {
     &:link {
         color: #cc0000;
@@ -74,37 +70,69 @@ body {
     }    
 }
 
+.menu-hidden { //пока не работает
+    line-height: 50px;
+    &__checkbox {
+       display: none;
+    }
+    &__img {
+        vertical-align: middle;
+        height: 2.5em;
+    }
+    @media @tablet {
+        visibility: hidden;
+    }
+    
+}
+.menu-hidden .menu-hidden__checkbox:checked ~ .menu{
+        visibility: visible;
+    }
 .menu {
     margin: 0;
     padding: 0;
-    text-align: center;
-    display: inline-block;
-    padding-left: 0;
-    visibility: hidden; //сделать выпадающее меню
-    height: 50px;
-    @media @tablet {
-        visibility: visible;
-    }
-    
+    text-align: left;
+    padding-left: 0;     
+    visibility: hidden;
+    height: 0;
     &__item {
         text-decoration: none; 
         margin-right: 20px;
-        line-height: 50px;
+        line-height: 2em;
+        display: block;
         &:hover {
             cursor: pointer;
         }     
+        @media @phone-strict {
+            background-color: #f4f4ef;
+            width: 10em;
+            padding-bottom: 1em;  
+        }
         @media @tablet {
-            display: inline-block;
+            padding-bottom: 0;
+            line-height: 50px;
+            display: inline-block; 
         }
 
-    }
-
-     
-    &__link._current {
+    }    
+    &__link {
+        &._current {
         text-decoration: none; 
         color: #000;
-        font-style: bold;
+        font-weight: bold;
+        }
+        @media @phone-strict {
+            padding-left: 10px;
+        }
     }
+    @media @phone-strict {
+        position: relative;
+        top: 50px;
+    }
+    @media @tablet {
+        height: 50px;
+        text-align: center;
+        visibility: visible;
+    }    
 }
 
 .search-form { 
@@ -112,11 +140,10 @@ body {
     &__search-field {
         display: inline-block;
         width: 15em;
+        height: 2em;
         @media @tablet {
             width: 11em;
         }
-        height: 2em;
-        
     }
     &__submit {
         vertical-align: middle;
@@ -256,23 +283,28 @@ body {
 
         }
         &__buy-later {
+            display: inline-block;
+            height: 2em;
             &:hover {
                 cursor: pointer;
             }
         }
 
         &__button-buy-later {
+            height: 2em;
+            vertical-align: top;
             border: none;
             background-color: #fff; 
-            height: 2em;
             display: inline-block;
             color: #aaa;
             border-bottom: 1px solid #aaa;
         }
         &__img-buy-later {
-            color: #999;
-            font-size: 2em;
-            font-stretch: ultra-expanded;
+            display: inline-block;
+            height: 2em;
+            & img {
+                height: 100%;
+            }
         }
 
         @media @desktop {

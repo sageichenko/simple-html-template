@@ -15,9 +15,12 @@
 		<span class="header__title right">+7 (812) 2&#8226;12&#8226;85&#8226;06</span>
 		<img class="header__logo" src="img/oggetto_logo.svg" alt="">
 	</header>
-	<section class="navigation row clearfix">
+	<section class="row clearfix">
 		<div class="grid">
-			<div class="hidden-menu"></div>
+			<label class="menu-hidden">
+				<input class="menu-hidden__checkbox" type="checkbox">
+				<img src="img/icons/menu-hidden.svg" alt="" class="menu-hidden__img">
+			
 				<ul class="menu left">
 					<li class="menu__item"><a href="#" class="menu__link link _current">LISP</a></li>
 					<li class="menu__item"><a href="#" class="menu__link link">OCaml</a></li>
@@ -25,6 +28,7 @@
 					<li class="menu__item"><a href="#" class="menu__link link">Python</a></li>
 					<li class="menu__item"><a href="#" class="menu__link link">PHP</a></li>
 				</ul>
+			</label>
 			<form class="search-form right" action=""> 
 				<input type="search" class="search-form__search-field" value="">
 				<input type="submit" class="search-form__submit" value="">
@@ -75,8 +79,9 @@
 				<!--div class="product-inf__buy-later"><span class="product-inf__img-buy-later">&hearts;</span><input type="text" class="product-inf__button-buy-later" value="Отложить на потом"></div-->
 
 				<label for="" class="product-inf__buy-later">
-					<span class="product-inf__img-buy-later">&hearts;</span>
-					<input type="button" class="product-inf__button-buy-later" value="Отложить на потом""></label>
+					<div class="product-inf__img-buy-later"><img src="img/icons/heart.svg" alt=""></div>
+					<input type="button" class="product-inf__button-buy-later" value="Отложить на потом"">
+				</label>
 			</form>
 		</div>
 	</main>
@@ -119,7 +124,7 @@
 		<div class="footer__service footer__item left">
 		<ul class="footer__column">
 			<li class="footer__item-service"><div class="footer__img-service"><img src="img/icons/delivery.svg" alt=""></div><span class="footer__name-service">Бесплатная доставка</span></li>
-			<li class="footer__item-service"><div class="footer__img-service"><img src="img/icons/heart.svg" alt=""></div><span class="footer__name-service">Пробники в подарок при каждой покупке</span></li>
+			<li class="footer__item-service"><div class="footer__img-service"><img src="img/icons/samples.svg" alt=""></div><span class="footer__name-service">Пробники в подарок при каждой покупке</span></li>
 			<li class="footer__item-service"><div class="footer__img-service"><img src="img/icons/cup.svg" alt=""></div><span class="footer__name-service">Акции и подарки за покупку от 4000&#8381;</span></li>
 		</ul>
 
