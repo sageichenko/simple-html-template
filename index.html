@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="header grid clearfix">
+    <span class="header__title left">7h3 5h0p</span>
+    <span class="header__title right">+7 (812) 2&#8226;12&#8226;85&#8226;06</span>
+    <a href=""><img class="header__logo" src="img/oggetto_logo.svg" alt=""></a>
+</header>
+<section class="row clearfix">
+    <div class="grid">
+        <label class="menu-hidden">
+            <input class="menu-hidden__checkbox" type="checkbox">
+            <img src="img/icons/menu-hidden.svg" alt="" class="menu-hidden__img">
+            <ul class="menu left">
+                <li class="menu__item"><a href="#" class="menu__link link _current">LISP</a></li>
+                <li class="menu__item"><a href="#" class="menu__link link">OCaml</a></li>
+                <li class="menu__item"><a href="#" class="menu__link link">JavaScript</a></li>
+                <li class="menu__item"><a href="#" class="menu__link link">Python</a></li>
+                <li class="menu__item"><a href="#" class="menu__link link">PHP</a></li>
+            </ul>
+        </label>
+        <div class="search-form-wrap right">
+            <form class="search-form" action="">
+                <input type="search" class="search-form__search-field" value="">
+                <input type="submit" class="search-form__submit" value="">
+            </form>
+        </div>
+    </div>
+</section>
+<main class="content grid">
+    <menu class="bread-crumbs">
+        <li class="bread-crumbs__item"><a href="" class="bread-crumbs__link link">LISP</a>/</li>
+        <li class="bread-crumbs__item"><a href="" class="bread-crumbs__link link">Одежда</a>/</li>
+        <li class="bread-crumbs__item"><a href="" class="bread-crumbs__link _current link">Футболки</a></li>
+    </menu>
+    <img id="tshirt-img" class="tshirt-img" src="img/tshirts/tshirt_green.jpg" alt="">
+    <div class="product-inf">
+        <h1 class="product-inf__name">Футболка Alien technology</h1>
+        <p class="product-inf__description">Состав 100% хлопок, динамическая типизация, польская нотация. Производство
+            Россия</p>
+        <p class="product-inf__price">1500&#8381;</p>
+        <form action="">
+            <p>Размер:</p>
+            <label class="product-inf__size">
+                <input class="product-inf__size-item radio-button" type="radio" name="size" value="S">
+                <span class="product-inf__item"><span>S</span></span>
+            </label>
+            <label class="product-inf__size">
+                <input class="product-inf__size-item radio-button" type="radio" name="size" value="M" checked="">
+                <span class="product-inf__item"><span>M</span></span>
+            </label>
+            <label class="product-inf__size">
+                <input class="product-inf__size-item radio-button" type="radio" name="size" value="L">
+                <span class="product-inf__item"><span>L</span></span>
+            </label>
+            <p>Цвет:</p>
+            <label class="product-inf__color">
+                <input class="product-inf__color-item radio-button" type="radio" name="color" value="white"
+                       onclick="changeColor(value)">
+                <span id="color1" class="product-inf__item"></span>
+            </label>
+            <label class="product-inf__color">
+                <input class="product-inf__color-item radio-button" type="radio" name="color" value="yellow"
+                       onclick="changeColor(value)">
+                <span id="color2" class="product-inf__item"></span>
+            </label>
+            <label class="product-inf__color">
+                <input class="product-inf__color-item radio-button" type="radio" name="color" value="green" checked=""
+                       onclick="changeColor(value)">
+                <span id="color3" class="product-inf__item"></span>
+            </label>
+            <input class="product-inf__button-buy" type="submit" value="Купить">
+            <label class="product-inf__buy-later">
+                <span class="product-inf__img-buy-later"><img src="img/icons/heart.svg" alt=""></span>
+                <input type="button" class="product-inf__button-buy-later" value="Отложить на потом">
+            </label>
+        </form>
+    </div>
+</main>
+<footer class="footer row">
+    <div class="grid">
+        <div class="footer__inf clearfix">
+            <div class="footer__block">
+                <div class="footer__support footer__item left">
+                    <h3 class="title">Сервис и поддержка</h3>
+                    <ul class="footer__column ">
+                        <li>Как сделать заказ</li>
+                        <li>Возврат товара</li>
+                        <li>Публичная оферта</li>
+                        <li>Доставка</li>
+                    </ul>
+                    <ul class="footer__column">
+                        <li>Способы оплаты</li>
+                        <li>Правила продажи</li>
+                        <li>Возврат денежных средств</li>
+                        <li>Вопросы и ответы</li>
+                    </ul>
+                </div>
+                <div class="footer__about footer__item right">
+                    <h3 class="title">О компании</h3>
+                    <ul class="footer__column">
+                        <li>О нас</li>
+                        <li>Контакты</li>
+                        <li>Вакансии</li>
+                        <li>Партнерам</li>
+                    </ul>
+                    <ul class="footer__column">
+                        <li>Сертификаты</li>
+                        <li>Преимущества</li>
+                        <li>Наши скидки</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__block">
+                <div class="footer__service footer__item left">
+                    <ul class="footer__column">
+                        <li class="footer__item-service">
+                            <div class="footer__img-service"><img src="img/icons/delivery.svg" alt=""></div>
+                            <span class="footer__name-service">Бесплатная доставка</span></li>
+                        <li class="footer__item-service">
+                            <div class="footer__img-service"><img src="img/icons/samples.svg" alt=""></div>
+                            <span class="footer__name-service">Пробники в подарок при каждой покупке</span></li>
+                        <li class="footer__item-service">
+                            <div class="footer__img-service"><img src="img/icons/cup.svg" alt=""></div>
+                            <span class="footer__name-service">Акции и подарки за покупку от 4000&#8381;</span></li>
+                    </ul>
+
+                </div>
+                <div class="footer__contact footer__item right">
+                    <ul class="footer__column">
+                        <li>
+                            <div class="footer__img-contact"><a class="footer__link-contact" href="#"><img
+                                src="img/icons/facebook.svg" alt=""></a></div>
+                        </li>
+                        <li>
+                            <div class="footer__img-contact"><a class="footer__link-contact" href="#"><img
+                                src="img/icons/twitter.svg" alt=""></a></div>
+                        </li>
+                        <li>
+                            <div class="footer__img-contact"><a class="footer__link-contact" href="#"><img
+                                src="img/icons/instagram.svg" alt=""></a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>2005-2017 &copy; 7h35h0p.ru - модный интернет магазин одежды, обуви и аксессуаров</p>
+            <p>Все права защищены. Доставка по всей России!</p>
+        </div>
+    </div>
+
+</footer>
+
+<script defer src="js/scripts.js"></script>
+</body>
+</html>
